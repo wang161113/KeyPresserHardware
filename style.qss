@@ -1,0 +1,298 @@
+﻿/* KeyPresser 样式表 */
+
+/* 全局样式 */
+QWidget {
+    font-family: "Microsoft YaHei", "SimHei", sans-serif;
+    font-size: 9pt;
+    color: #333333;
+    background-color: #f5f5f5;
+}
+
+/* 按钮样式 */
+QPushButton {
+    background-color: #4a86e8;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 3px 3px;
+    min-height: 18px;
+}
+
+/* 工具按钮样式 */
+QToolButton {
+    height: 24px;
+    max-width: 47px;
+    padding: 2px 2px;
+    spacing: 2px;
+    background-color: transparent;
+    border-radius: 3px;
+}
+
+QToolButton:hover {
+    background-color: #e6f0ff;
+}
+
+QToolButton:pressed {
+    background-color: #c9daf8;
+}
+
+QPushButton[state="running"] {
+    background-color: #e74c3c;
+}
+
+QPushButton[state="running"]:hover {
+    background-color: #ff6b5b;
+}
+
+QPushButton[state="running"]:pressed {
+    background-color: #c0392b;
+}
+
+QPushButton:hover {
+    background-color: #5c94f0;
+}
+
+QPushButton:pressed {
+    background-color: #3a76d8;
+}
+
+/* 标签样式 */
+QLabel {
+    color: #333333;
+}
+
+/* 特殊标签样式 */
+QLabel[styleSheet*="color: green"] {
+    font-weight: bold;
+    color: #2e8b57 !important;
+}
+
+QLabel[styleSheet*="color: red"] {
+    font-weight: bold;
+    color: #e74c3c !important;
+}
+
+/* 输入框样式 */
+QLineEdit {
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+    padding: 2px;
+    background-color: white;
+    min-height: 18px;
+}
+
+QLineEdit:focus {
+    border: 1px solid #4a86e8;
+}
+
+/* 下拉框样式 */
+QComboBox {
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+    padding: 2px;
+    background-color: white;
+    min-height: 18px;
+}
+
+QComboBox:hover {
+    border: 1px solid #4a86e8;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 16px;
+    border-left: 1px solid #cccccc;
+}
+
+QComboBox::down-arrow {
+    image: url(:/png/down_arrow.png);
+    width: 10px;
+    height: 10px;
+}
+
+/* 复选框样式 */
+QCheckBox {
+    spacing: 5px;
+}
+
+QCheckBox::indicator {
+    width: 15px;
+    height: 15px;
+}
+
+QCheckBox::indicator:unchecked {
+    border: 1px solid #cccccc;
+    background-color: white;
+    border-radius: 3px;
+}
+
+QCheckBox::indicator:checked {
+    border: 1px solid #4a86e8;
+    background-color: #e6f0ff;
+    border-radius: 3px;
+    image: url(:/png/checked.png);
+    /* 使用Unicode字符作为备选方案 */
+    content: "✓";
+    color: #4a86e8;
+}
+
+QCheckBox::indicator:checked:disabled {
+    border: 1px solid #bbbbbb;
+    background-color: #dddddd;
+}
+
+
+/* 单选按钮样式 */
+QRadioButton {
+    spacing: 5px;
+}
+
+QRadioButton::indicator {
+    width: 15px;
+    height: 15px;
+}
+
+QRadioButton::indicator:unchecked {
+    border: 1px solid #cccccc;
+    background-color: white;
+    border-radius: 3px;
+}
+
+QRadioButton::indicator:checked {
+    border: 1px solid #4a86e8;
+    background-color: #e6f0ff;
+    border-radius: 3px;
+    image: url(:/png/checked.png);
+    /* 使用Unicode字符作为备选方案 */
+    content: "✓";
+    color: #4a86e8;
+}
+
+QRadioButton::indicator:hover {
+    border: 1px solid #5c94f0;
+}
+
+QRadioButton::indicator:checked:disabled {
+    border: 1px solid #bbbbbb;
+    background-color: #dddddd;
+}
+
+
+/* 分组框样式 */
+QGroupBox {
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    margin-top: 8px;
+    padding-top: 8px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 0 5px;
+    color: #4a86e8;
+    font-weight: bold;
+}
+
+/* 展开/折叠按钮样式 */
+QPushButton[text*="更多按键"], QPushButton[text*="收起按键"],
+QPushButton[text*="定时任务"]{
+    background-color: transparent;
+    color: #4a86e8;
+    text-align: left;
+    border: none;
+}
+
+QPushButton[text*="更多按键"]:hover, QPushButton[text*="收起按键"]:hover,
+QPushButton[text*="定时任务"]:hover{
+    color: #5c94f0;
+}
+
+/* 窗口整体样式 */
+KeyPresser {
+    background-color: #f5f5f5;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+}
+
+/* 主窗口标题栏 */
+QMainWindow {
+    background-color: #4a86e8;
+}
+
+QMainWindow::title {
+    color: white;
+    font-weight: bold;
+    padding-left: 8px;
+}
+
+QMainWindow::title:disabled {
+    color: #cccccc;
+}
+
+/* 标题栏样式 */
+QTitleBar {
+    background-color: #4a86e8;
+    color: white;
+    font-weight: bold;
+}
+
+QTitleBar:active {
+    background-color: #5c94f0;
+}
+
+QTitleBar:inactive {
+    background-color: #cccccc;
+}
+
+
+/* QTabWidget样式 */
+QTabWidget::pane {
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background: white;
+    margin: 0px;
+    padding: 0px;
+}
+
+QTabWidget::tab-bar {
+    alignment: left;
+}
+
+QTabBar::tab {
+    background: #e0e0e0;
+    border: none;
+    border-bottom: none;
+    padding: 5px 15px;
+    margin-right: 2px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+QTabBar::tab:selected {
+    background: white;
+    border-color: #4a86e8;
+    color: #4a86e8;
+}
+
+QTabBar::tab:hover {
+    background: #f0f0f0;
+}
+
+QTabBar::tab:!selected {
+    margin-top: 2px;
+}
+
+
+/* 移除所有控件的焦点虚线框 */
+*:focus {
+    outline: none;
+}
+
+/* 或者针对特定控件移除焦点框 */
+QPushButton:focus, QLineEdit:focus, QComboBox:focus {
+    outline: none;
+}
+
+
