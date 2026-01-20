@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
     keyPresser.setWindowTitle(QStringLiteral("KeyPresser硬件版"));
 
 #ifdef QT_NO_DEBUG
-    //if(!keyPresser.checkArduino()) { return -1; }
+    if(!keyPresser.checkArduino()) { return -1; }
 #endif
 
     keyPresser.show();
